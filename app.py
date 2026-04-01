@@ -4,8 +4,16 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    # 이제는 JSON이 아니라 HTML 파일을 보냅니다
-    return render_template('index.html')
+    # 여기에 내 데이터를 만든다!
+    my_profile = {
+        "name": "안수현",
+        "age": 19 ,
+        "hobby": "게임",
+        "favorite_food": "라면",
+        "email:": "abjkr29@gmail.com"
+    }
 
-if __name__ == '__main__':
+    return render_template('index.html', data=my_profile)
+
+if __name__=='__main__':
     app.run(debug=True)
