@@ -12,7 +12,7 @@ def home():
         "favorite_food": "라면",
         "email:": "abjkr29@gmail.com"
     }
-
+    #데이터 이름 붙혀서 내보내기
     return render_template('index.html', data=my_profile)
 
 if __name__=='__main__':
